@@ -1,15 +1,11 @@
--- Made by jLn0n
 
--- services
 local coreGui = game:GetService("CoreGui")
--- objects
 local camera = workspace.CurrentCamera
 local drawingUI = Instance.new("ScreenGui")
 drawingUI.Name = "Drawing"
 drawingUI.IgnoreGuiInset = true
 drawingUI.DisplayOrder = 0x7fffffff
 drawingUI.Parent = coreGui
--- variables
 local drawingIndex = 0
 local uiStrokes = table.create(0)
 local baseDrawingObj = setmetatable({
