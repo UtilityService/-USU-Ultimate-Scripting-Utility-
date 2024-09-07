@@ -8,8 +8,8 @@ local PresetColor = Color3.fromRGB(44, 120, 224)
 local CloseBind = Enum.KeyCode.RightControl
 
 local ui = Instance.new("ScreenGui")
-ui.Name = "ui"
-ui.Parent = game.CoreGui
+ui.Name = "UltimateScriptingUtility"
+ui.Parent = game:GetService("CoreGui")
 ui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 coroutine.wrap(
