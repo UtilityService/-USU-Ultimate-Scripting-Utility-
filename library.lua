@@ -582,6 +582,7 @@ function lib:Window(text, preset, closebind)
 
 			Toggle.MouseButton1Click:Connect(
 				function()
+					toggled = not toggled
 					if toggled == false then
 						TweenService:Create(
 							Toggle,
@@ -649,7 +650,6 @@ function lib:Window(text, preset, closebind)
 							true
 						)
 					end
-					toggled = not toggled
 					pcall(callback, toggled)
 				end
 			)
