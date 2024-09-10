@@ -695,7 +695,7 @@ function lib:Window(text, preset, closebind)
 			function ToggleFunctions:Set(value)
 				toggled = value
 				
-				if toggled == false then
+				if toggled == true then
 					TweenService:Create(
 						Toggle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
