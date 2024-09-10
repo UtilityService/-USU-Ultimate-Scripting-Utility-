@@ -693,7 +693,7 @@ function lib:Window(text, preset, closebind)
 			Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
 			
 			function ToggleFunctions:Set(value)
-				toggled = value
+				toggled = not value
 				
 				if toggled == true then
 					TweenService:Create(
