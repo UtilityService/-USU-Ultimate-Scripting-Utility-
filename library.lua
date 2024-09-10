@@ -802,7 +802,7 @@ function lib:Window(text, preset, closebind)
 			function SliderFunctions:Set(valueSet)
 				
 				local value = (valueSet / max)
-				
+				warn(valueSet)
 				local pos =
 					UDim2.new(
 						math.clamp(value, 0, 1),
@@ -819,8 +819,8 @@ function lib:Window(text, preset, closebind)
 					)
 				CurrentValueFrame:TweenSize(pos1, "Out", "Sine", 0.1, true)
 				SlideCircle:TweenPosition(pos, "Out", "Sine", 0.1, true)
-				SliderValue.Text = tostring(math.floor(value * valueSet))
-				currentSlider_Value = math.floor(value * valueSet)
+				SliderValue.Text = tostring(math.floor(value * max))
+				currentSlider_Value = math.floor(value * max)
 			end
 			
 			return SliderFunctions
