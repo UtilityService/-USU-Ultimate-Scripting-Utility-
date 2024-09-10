@@ -494,7 +494,7 @@ function lib:Window(text, preset, closebind)
 			Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
 		end
 		function tabcontent:Toggle(text,default, callback)
-			local toggled = false
+			local toggled = default
 			local ToggleFunctions = {}
 			
 			local Toggle = Instance.new("TextButton")
@@ -654,7 +654,7 @@ function lib:Window(text, preset, closebind)
 				end
 			)
 
-			if default == true then
+			if toggled == true then
 				TweenService:Create(
 					Toggle,
 					TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
@@ -687,13 +687,12 @@ function lib:Window(text, preset, closebind)
 					.2,
 					true
 				)
-				toggled = not toggled
 			end
 
 			Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
 			
 			function ToggleFunctions:Set(value)
-				toggled = not value
+				toggled = value
 				
 				if toggled == true then
 					TweenService:Create(
