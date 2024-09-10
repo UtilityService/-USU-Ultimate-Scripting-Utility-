@@ -799,7 +799,10 @@ function lib:Window(text, preset, closebind)
 			
 			local SliderFunctions = {}
 			
-			function SliderFunctions:Set(value)
+			function SliderFunctions:Set(valueSet)
+				
+				local value = math.floor(((valueSet * max) / max) * (max - min) + min)
+				
 				local pos =
 					UDim2.new(
 						math.clamp(value, 0, 1),
