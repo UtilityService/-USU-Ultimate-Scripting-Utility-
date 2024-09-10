@@ -654,7 +654,7 @@ function lib:Window(text, preset, closebind)
 				function()
 					toggled = not toggled
 					checkToggled()
-					pcall(callback, not toggled)
+					pcall(callback, toggled)
 				end
 			)
 			
