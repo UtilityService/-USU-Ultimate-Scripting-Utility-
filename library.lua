@@ -583,7 +583,7 @@ function lib:Window(text, preset, closebind)
 			Toggle.MouseButton1Click:Connect(
 				function()
 					toggled = not toggled
-					if toggled == false then
+					if toggled == true then
 						TweenService:Create(
 							Toggle,
 							TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
