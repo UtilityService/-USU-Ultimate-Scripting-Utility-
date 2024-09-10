@@ -581,7 +581,7 @@ function lib:Window(text, preset, closebind)
 			)()
 			
 			local function checkToggled()
-				if toggled == true then
+				if toggled == false then
 					TweenService:Create(
 						Toggle,
 						TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
