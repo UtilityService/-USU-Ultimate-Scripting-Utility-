@@ -501,4 +501,4 @@ function DrawingLib.new(drawingType)
 end
 
 setreadonly(DrawingLib, true)
-return DrawingLib
+getgenv()["USUDirectory"].DrawingLibrary = DrawingLib
